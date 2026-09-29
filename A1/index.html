@@ -10,7 +10,22 @@ margin: 20px;
 </style>
 </head>
 <body>
-<h1>Assignment 1: </h1>
+<h1>Assignment 1: Perspective and Image Pyramids</h1>
 <a href="../index.html">Return</a>
+<br>
+<h2>Perspective of Cameras</h2>
+
+<p>...</p>
+
+<br>
+<h2>Aligning using Image Pyramids</h2>
+
+<p>To produce a color image with only digitized Prokudin-Gorskii glass plate images, we need to use NCC to aligin. However, since an exhaustive pixel-by-pixel comparison is required, the code takes a long time to execute with large images. To address this, we use an image pyramid to generate a downscaled version (half the original size); we use this smaller image for coarse localization and then switch to the original image for fine-tuning.</p>
+<p>Since the input consists of a single file containing three image channels, cropping might leave white borders; to prevent edge artifacts from affecting the NCC calculation, I performed a slight crop to ensure that only the central, valid region is used for alignment.</p>
+
+<br>
+<p>After improvement, each images takes not longer than 2 minutes:</p>
+
+
 </body>
 </html>
